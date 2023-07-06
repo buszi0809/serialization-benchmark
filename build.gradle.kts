@@ -15,9 +15,9 @@ repositories {
 
 dependencies {
     // Moshi
-    implementation("com.squareup.moshi:moshi:1.14.0")
-    implementation("com.squareup.moshi:moshi-adapters:1.14.0")
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+    implementation("com.squareup.moshi:moshi:1.15.0")
+    implementation("com.squareup.moshi:moshi-adapters:1.15.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
 
     // Kotlinx
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
