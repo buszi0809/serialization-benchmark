@@ -1,4 +1,6 @@
+import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -10,7 +12,7 @@ data class Push(
     val repo: Repo,
     val payload: Payload,
     val public: Boolean,
-    val created_at: String
+    @SerialName("created_at") @Json(name = "created_at") val createdAt: String
 )
 
 @Serializable
@@ -18,9 +20,9 @@ data class Push(
 data class Actor(
     val id: Int,
     val login: String,
-    val gravatar_id: String,
+    @SerialName("gravatar_id") @Json(name = "gravatar_id") val gravatarId: String,
     val url: String,
-    val avatar_url: String
+    @SerialName("avatar_url") @Json(name = "avatar_url") val avatarUrl: String
 )
 
 @Serializable
@@ -34,16 +36,16 @@ data class Repo(
 @Serializable
 @JsonClass(generateAdapter = true)
 data class Payload(
-    val push_id: Int? = null,
+    @SerialName("push_id") @Json(name = "push_id") val pushId: Int? = null,
     val size: Int? = null,
-    val distinct_size: Int? = null,
+    @SerialName("distinct_size") @Json(name = "distinct_size") val distinctSize: Int? = null,
     val ref: String? = null,
     val head: String? = null,
     val before: String? = null,
-    val ref_type: String? = null,
-    val master_branch: String? = null,
+    @SerialName("ref_type") @Json(name = "ref_type") val refType: String? = null,
+    @SerialName("master_branch") @Json(name = "master_branch") val masterBranch: String? = null,
     val description: String? = null,
-    val pusher_type: String? = null
+    @SerialName("pusher_type") @Json(name = "pusher_type") val pusherType: String? = null
 )
 
 fun main() {

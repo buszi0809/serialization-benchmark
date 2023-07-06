@@ -1,44 +1,46 @@
+import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 @JsonClass(generateAdapter = true)
 data class UserProfile(
-    val active: Boolean,
-    val billingAddress: BillingAddress,
-    val delivery: Delivery,
     val personal: Personal,
-    val preferences: Preferences
-)
-
-@Serializable
-@JsonClass(generateAdapter = true)
-data class BillingAddress(
-    val city: String,
-    val countryCode: String,
-    val postCode: String,
-    val streetAddress: String
-)
-
-@Serializable
-@JsonClass(generateAdapter = true)
-data class Delivery(
-    val city: String,
-    val countryCode: String,
-    val name: String,
-    val postCode: String,
-    val remarks: String,
-    val streetAddress: String
+    @SerialName("billing_address") @Json(name = "billing_address") val billingAddress: BillingAddress,
+    val delivery: Delivery,
+    val preferences: Preferences,
+    val active: Boolean
 )
 
 @Serializable
 @JsonClass(generateAdapter = true)
 data class Personal(
+    @SerialName("first_name") @Json(name = "first_name") val firstName: String,
+    @SerialName("last_name") @Json(name = "last_name") val lastName: String,
     val email: String,
-    val emailVerified: Boolean,
-    val firstName: String,
-    val lastName: String,
-    val phoneNumber: String
+    @SerialName("phone_number") @Json(name = "phone_number") val phoneNumber: String,
+    @SerialName("email_verified") @Json(name = "email_verified") val emailVerified: Boolean
+)
+
+@Serializable
+@JsonClass(generateAdapter = true)
+data class BillingAddress(
+    @SerialName("post_code") @Json(name = "post_code") val postCode: String,
+    val city: String,
+    @SerialName("street_address") @Json(name = "street_address") val streetAddress: String,
+    @SerialName("country_code") @Json(name = "country_code") val countryCode: String
+)
+
+@Serializable
+@JsonClass(generateAdapter = true)
+data class Delivery(
+    val name: String,
+    @SerialName("post_code") @Json(name = "post_code") val postCode: String,
+    val city: String,
+    @SerialName("street_address") @Json(name = "street_address") val streetAddress: String,
+    @SerialName("country_code") @Json(name = "country_code") val countryCode: String,
+    val remarks: String
 )
 
 @Serializable
