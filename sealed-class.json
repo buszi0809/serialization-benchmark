@@ -1,0 +1,35 @@
+[
+  {
+    "type": "IMAGE",
+    "url": "some url"
+  },
+  {
+    "type": "RESOURCE",
+    "name": "thunder"
+  },
+  {
+    "type": "NONE"
+  },
+  {
+    "type": "IMAGE",
+    "url": "some url"
+  },
+  {
+    "type": "RESOURCE",
+    "name": "thunder"
+  },
+  {
+    "type": "NONE"
+  },
+  {
+    "type": "IMAGE",
+    "url": "some url"
+  },
+  {
+    "type": "RESOURCE",
+    "name": "thunder"
+  },
+  {
+    "type": "NONE"
+  }
+]

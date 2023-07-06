@@ -1,0 +1,27 @@
+{
+  "personal": {
+    "firstName": "Name",
+    "lastName": "Last name",
+    "email": "email@test.com",
+    "phoneNumber": "888777666",
+    "emailVerified": true
+  },
+  "billingAddress": {
+    "postCode": "33-332",
+    "city": "Krakow",
+    "streetAddress": "Wielicka 28a/12",
+    "countryCode": "PL"
+  },
+  "delivery": {
+    "name": "Some name",
+    "postCode": "123-123",
+    "city": "Somewhere",
+    "streetAddress": "Nice Street",
+    "countryCode": "GB",
+    "remarks": "On the second floor"
+  },
+  "preferences": {
+    "notifications": false
+  },
+  "active": true
+}
