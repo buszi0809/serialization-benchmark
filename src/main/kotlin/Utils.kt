@@ -41,11 +41,11 @@ fun <Serializer, Model> measure(
     val combinedSerializationTimes = rawTimes.map { (first, _, third) -> first + third }
 
     println(title)
-    println("Serializer creation times:       $serializerCreationTimes")
-    println("Deserialization times:           $deserializationTimes")
-    println("Serialization times:             $serializationTimes")
-    println("Combined deserialization times:  $combinedDeserializationTimes")
-    println("Combined serialization times:    $combinedSerializationTimes")
+    println("Serializer/adapter creation times:  $serializerCreationTimes")
+    println("Deserialization times:              $deserializationTimes")
+    println("Serialization times:                $serializationTimes")
+    println("Combined deserialization times:     $combinedDeserializationTimes")
+    println("Combined serialization times:       $combinedSerializationTimes")
 }
 
 @OptIn(ExperimentalStdlibApi::class)
